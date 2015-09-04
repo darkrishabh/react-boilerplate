@@ -53,6 +53,7 @@ var GlobalLoader = {
         window.Accordion = RB.Accordion;
         window.ProgressBar = RB.ProgressBar;
         window.Pagination = RB.Pagination;
+        window.Badge = RB.Badge;
 
         window.RBR = require("react-router-bootstrap"); // React Router Bootstrap
         window.NavItemLink = RBR.NavItemLink;

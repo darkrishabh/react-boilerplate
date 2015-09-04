@@ -12,15 +12,20 @@ var NotFound = React.createClass({
 });
 var AppHome = React.createClass({
 
-    render: function(){
+    render: function () {
         return (
             <div id="root-container">
-                <header className="theme-dark">
-                    <Navbar>
-                        <Nav>
-                            <NavItemLink to="index">Home</NavItemLink>
-                        </Nav>
-                    </Navbar>
+                <header><Navbar brand="Y2M" style={{marginRight: 0, marginLeft: 0}}>
+                    <Nav>
+                        <NavItemLink to="index">Home</NavItemLink>
+                    </Nav>
+                    <ButtonToolbar className={"pull-right"}
+                                   style={{right: 20, position:"absolute", marginTop: 15}}>
+                        <Badge style={{backgroundColor: "#72D667", margin: 2}}>-</Badge>
+                        <Badge style={{backgroundColor: "#FDDB2A", margin: 2}}>^</Badge>
+                        <Badge style={{backgroundColor: "#D86363", margin: 2}}>X</Badge>
+                    </ButtonToolbar>
+                </Navbar>
                 </header>
 
 
@@ -44,5 +49,6 @@ Router.run(routes, Router.HistoryLocation, function (Handler) {
     function refresh_react_app() {
         React.render(<Handler/>, document.body);
     }
+
     refresh_react_app();
 });

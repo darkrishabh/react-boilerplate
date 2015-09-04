@@ -11,7 +11,6 @@ gulp.task('html', function() {
 gulp.task('scripts', function() {
     var browserify = require('gulp-browserify'),
         reactify = require('reactify'),
-        literalify = require('literalify'),
         rename = require('gulp-rename')
 
     return gulp.src('./src/app.jsx')
