@@ -18,7 +18,7 @@ gulp.task('scripts', function() {
         .pipe(browserify({
             debug: true,
             extensions: ['.jsx', '.js', '.json'],
-            transform: [reactify, {"harmony": true}]
+            transform: [reactify]
         }))
         .on('error', function(err) {
             gutil.log(err.message)
